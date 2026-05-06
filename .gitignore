@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Dependency folders
+node_modules/
+
+# Build / cache folders
+dist/
+build/
+.cache/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+
+# OS generated files
+Desktop.ini
+
+# Optional: uploaded archives
+*.zip
+*.rar
