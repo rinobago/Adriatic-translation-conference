@@ -1,0 +1,13 @@
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+    --white-color: #ffffff;
+    --primary-color: #49a582;
+    --secondary-color: #2f6f57;
+    --section-bg-color: #e8fff6;
+    --dark-color: #000000;
+    --navbar-bg-color: #255746;
+    --p-color: #717275;
+    --highlight-icon-color: #ff0100;
+}

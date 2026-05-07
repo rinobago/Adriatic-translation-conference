@@ -663,6 +663,23 @@ strong {
     height: auto;
 }
 
+.languageLogos {
+    height: 150px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.relative {
+    position: relative;
+}
+
+.translDoc {
+    margin-top: -70px;
+}
+
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
@@ -1056,6 +1073,10 @@ strong {
     .footer-p {
         font-size: 14px;
     }
+
+    .translDoc {
+        margin-top: 48px;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -1067,6 +1088,14 @@ strong {
     .date-text {
         border-right: solid 1px white;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .languageLogos {
+        height: 125px;
+        top: -20px;
+        right: -10px;
     }
 }
 
