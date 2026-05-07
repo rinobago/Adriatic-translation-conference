@@ -3,11 +3,68 @@
 -----------------------------------------*/
 :root {
     --white-color: #ffffff;
-    --primary-color: #49a582;
-    --secondary-color: #2f6f57;
-    --section-bg-color: #e8fff6;
+    --primary-color: #21348f;
+    --secondary-color: #4791aa;
+    --section-bg-color: #e8f4ff;
     --dark-color: #000000;
-    --navbar-bg-color: #255746;
+    --navbar-bg-color: #10135f;
     --p-color: #717275;
     --highlight-icon-color: #ff0100;
+    --bs-info-rgb: 130, 212, 230;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/*---------------------------------------
+  NAVBAR             
+-----------------------------------------*/
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/*---------------------------------------
+  HERO             
+-----------------------------------------*/
+
+.hero::after {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(73, 165, 130, 0.15) 0%, rgb(16, 19, 95) 100%)
+        repeat scroll 0% 0%;
+}
+
+.custom-border-btn2 {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+.custom-border-btn2:hover {
+    border: 2px solid var(--primary-color);
+}
+
+.highlight-info {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.highlight-thumb {
+    padding: 0px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+    .date-text,
+    .location-text {
+        padding: 8px 16px;
+    }
+
+    .date-text {
+        border-right: 0;
+        margin-bottom: 0px;
+    }
 }
