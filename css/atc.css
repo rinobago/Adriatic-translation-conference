@@ -68,3 +68,155 @@ button {
         margin-bottom: 0px;
     }
 }
+
+/*---------------------------------------
+  ZAŠTO DOĆI             
+-----------------------------------------*/
+
+.why-attend {
+    background-color: var(--section-bg-color);
+}
+
+.why-card {
+    background: #ffffff;
+    padding: 40px 32px;
+    border-radius: 24px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+}
+
+.why-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4791aa;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.why-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.why-text {
+    margin: 0;
+    color: #6c757d;
+    line-height: 1.7;
+}
+
+/*---------------------------------------
+  PROGRAM             
+-----------------------------------------*/
+
+.program {
+    background: #f8fbff;
+}
+
+.program-topic {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px 20px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.program-topic:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.program-topic h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--navbar-bg-color);
+}
+
+.program-coming-soon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: #e8f4ff;
+    color: var(--navbar-bg-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.program .custom-btn {
+    background: var(--navbar-bg-color);
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.program .custom-btn:hover {
+    background: var(--secondary-color);
+}
+
+/*---------------------------------------
+  MORE             
+-----------------------------------------*/
+
+.more {
+    background-color: var(--primary-color);
+}
+
+.more p {
+    color: white;
+}
+
+.pIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 10px;
+    overflow: visible;
+    margin-right: 25px;
+}
+
+.moreThanImage {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.more .d-flex {
+    min-width: 0;
+}
+
+.more .d-flex > p,
+.more .d-flex > h6 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 576px) {
+    .more .row {
+        --bs-gutter-x: 1rem;
+    }
+
+    .pIcon {
+        height: 20px;
+        padding: 8px;
+        margin-right: 14px;
+        box-sizing: content-box;
+    }
+}
