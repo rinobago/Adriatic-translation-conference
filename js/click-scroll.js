@@ -1,37 +1,59 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
+// jquery-click-scroll
+// Updated to use each link's href target instead of hardcoded section order.
 
-var sectionArray = [1, 2, 3, 4, 5, 6, 7];
+(function ($) {
+    "use strict";
 
-$.each(sectionArray, function(index, value){
-          
-     $(document).scroll(function(){
-         var offsetSection = $('#' + 'section_' + value).offset().top - 84;
-         var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 1;
-         
-        
-         if ( docScroll1 >= offsetSection ){
-             $('.navbar-nav .nav-item .nav-link').removeClass('active');
-             $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');  
-             $('.navbar-nav .nav-item .nav-link').eq(index).addClass('active');
-             $('.navbar-nav .nav-item .nav-link').eq(index).removeClass('inactive');
-         }
-         
-     });
-    
-    $('.click-scroll').eq(index).click(function(e){
-        var offsetClick = $('#' + 'section_' + value).offset().top - 84;
+    var $navLinks = $(".navbar-nav .nav-item .nav-link.click-scroll");
+
+    function getScrollOffset() {
+        return ($(".navbar").outerHeight() || 0) + 10;
+    }
+
+    function setActiveLink() {
+        var docScroll = $(document).scrollTop() + getScrollOffset() + 1;
+        var activeIndex = 0;
+
+        $navLinks.each(function (index) {
+            var targetId = $(this).attr("href");
+            if (!targetId || targetId.charAt(0) !== "#") {
+                return;
+            }
+
+            var $target = $(targetId);
+            if ($target.length && docScroll >= $target.offset().top) {
+                activeIndex = index;
+            }
+        });
+
+        $navLinks.removeClass("active").addClass("inactive");
+        $navLinks.eq(activeIndex).addClass("active").removeClass("inactive");
+    }
+
+    $navLinks.on("click", function (e) {
+        var targetId = $(this).attr("href");
+        if (!targetId || targetId.charAt(0) !== "#") {
+            return;
+        }
+
+        var $target = $(targetId);
+        if (!$target.length) {
+            return;
+        }
+
         e.preventDefault();
-        $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 300)
+        $("html, body").animate(
+            {
+                scrollTop: $target.offset().top - getScrollOffset(),
+            },
+            300,
+        );
     });
-    
-});
 
-$(document).ready(function(){
-    $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');    
-    $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
-    $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
-});
+    $(document).on("scroll", setActiveLink);
+
+    $(document).ready(function () {
+        $navLinks.addClass("inactive");
+        setActiveLink();
+    });
+})(window.jQuery);
