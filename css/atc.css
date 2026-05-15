@@ -312,8 +312,8 @@ button {
 }
 
 .mediaLogo {
-    height: 35px;
-    padding: 20px;
+    height: 20px;
+    padding: 10px;
     box-sizing: content-box;
 }
 
@@ -332,7 +332,8 @@ button {
 
 @media (max-width: 990px) {
     .mediaLogo {
-        height: 30px;
+        height: 20px;
+        padding: 0px;
     }
 
     .media-row > a:nth-child(3),
@@ -390,7 +391,7 @@ button {
     }
 
     .mediaLogo {
-        height: 25px;
+        height: 20px;
     }
 }
 
@@ -521,5 +522,5 @@ button {
 }
 
 .call-to-action {
-    background-image: url("../images/atc/2025-selection/1R627694.jpg");
+    background-image: url("../images/atc/Vidimo-se-u-Zagrebu.jpg");
 }
