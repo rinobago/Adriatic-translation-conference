@@ -1,21 +1,17 @@
-/*
-
-TemplateMo 575 Leadership Event
-
-https://templatemo.com/tm-575-leadership-event
-
-*/
-
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
     --white-color: #ffffff;
     --primary-color: #49a582;
+    /* --primary-color: #58d2a3; */
+    /* --primary-color: #2f6f57; */
+    --dark-bg-color: #255746;
     --secondary-color: #2f6f57;
     --section-bg-color: #e8fff6;
     --dark-color: #000000;
-    --navbar-bg-color: #255746;
+    /* --navbar-bg-color: #255746; */
+    --navbar-bg-color: #49a582;
     --p-color: #717275;
     --highlight-icon-color: #ff0100;
 
@@ -265,12 +261,15 @@ strong {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
 }
+.custom-border-btn:hover {
+    border: 2px solid var(--dark-bg-color);
+}
 
 .custom-btn:hover,
 .custom-btn2:hover,
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
 .navbar-nav .nav-link.custom-btn:hover {
-    background: var(--primary-color);
+    background: var(--dark-bg-color);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     color: var(--white-color);
 }
@@ -325,7 +324,7 @@ strong {
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .navbar-toggler {
@@ -504,8 +503,8 @@ strong {
 
 .hero::after {
     content: "";
-    background: rgba(0, 0, 0, 0) linear-gradient(rgba(73, 165, 130, 0.15) 0%, rgb(37, 87, 70) 100%)
-        repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0)
+        linear-gradient(rgba(73, 165, 130, 0.15) 0%, rgb(73, 165, 130) 100%) repeat scroll 0% 0%;
     position: absolute;
     top: 0;
     right: 0;
@@ -773,21 +772,21 @@ strong {
 }
 
 .call-to-action .custom-btn {
-    background: var(--white-color);
-    color: var(--dark-color);
-}
-
-.call-to-action .custom-btn:hover {
     background: var(--primary-color);
     color: var(--white-color);
 }
 
+.call-to-action .custom-btn:hover {
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
 .ponuda-hero {
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .ponuda-hero:hover {
-    background: var(--navbar-bg-color);
+    background: var(--dark-bg-color);
 }
 
 .cta-desc {
