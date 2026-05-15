@@ -18,6 +18,32 @@ button {
     cursor: pointer;
 }
 
+.ponuda-hero {
+    background: var(--primary-color);
+}
+
+.custom-btn:hover,
+.custom-btn2:hover,
+.navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
+.navbar-nav .nav-link.custom-btn:hover {
+    background: var(--primary-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    color: var(--white-color);
+}
+
+.ponuda-hero:hover {
+    background: var(--navbar-bg-color);
+}
+
+.custom-border-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.custom-border-btn:hover {
+    border: 2px solid var(--primary-color);
+}
+
 /*---------------------------------------
   NAVBAR             
 -----------------------------------------*/
