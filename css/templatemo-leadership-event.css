@@ -1002,6 +1002,17 @@ strong {
     color: var(--white-color);
 }
 
+.privacy-policy-section h2,
+.terms-section h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-section h1,
+.terms-section h1 {
+    margin-bottom: 32px;
+}
+
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
